@@ -13,10 +13,7 @@ export const HeroSection = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Est neque
             aspernatur voluptatibus nemo vel recusandae architecto reiciendis
             sapiente consequuntur incidunt voluptas expedita sit laboriosam,
-            accusantium quod. Eum, eos, nesciunt ratione doloribus repellat vel
-            facilis maiores dicta consequuntur veritatis ex. Assumenda at eos
-            repellendus repudiandae libero voluptate dignissimos doloribus
-            quaerat.
+            accusantium.
           </p>
           <label className="input validator w-full">
             <svg
