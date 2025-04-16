@@ -47,10 +47,11 @@ export const FreeBook = () => {
       <div className="max-w-screen-2xl containner mx-auto md:px-20 px-4">
         <div>
           <h1 className="text-2xl font-bold pb-2 ">Free Books </h1>
-          <p>
+          <p className="py-10">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
             modi assumenda corrupti rem maiores tempore itaque ipsum, sunt
-            blanditiis ipsa?
+            blanditiis ipsa sit amet consectetur adipisicing elit. Consectetur
+            modi assumenda corrupti ?
           </p>
         </div>
         {/* react-slick for slider */}

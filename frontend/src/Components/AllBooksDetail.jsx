@@ -6,7 +6,7 @@ export const AllBooksDetail = () => {
   return (
     <>
       <div className="max-w-screen-2xl container mx-auto md:px-20 px-4">
-        <div className="mt-28 items-center justify-center text-center">
+        <div className="pt-24 items-center justify-center text-center">
           <h1 className="text-2xl md:text-4xl">
             We are Delighted to have you
             <span className="text-blue-500"> Here!</span>

@@ -15,7 +15,7 @@ export const HeroSection = () => {
             sapiente consequuntur incidunt voluptas expedita sit laboriosam,
             accusantium.
           </p>
-          <label className="input validator w-full">
+          <label className="input validator w-full dark:bg-white dark:text-black">
             <svg
               className="h-[1em] opacity-50"
               xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@ export const HeroSection = () => {
         </button>
       </div>
       <div className="w-full md:w-1/2 order-1">
-        <img className="w-120 h-120" src="../../public/banner2.avif" alt="" />
+        <img className="w-92 h-92" src="../../public/Banner-img.png" alt="" />
       </div>
     </div>
   );

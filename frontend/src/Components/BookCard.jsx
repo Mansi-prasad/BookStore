@@ -3,8 +3,8 @@ import React from "react";
 export const BookCard = ({ item }) => {
   return (
     <div>
-      <div className="card bg-base-100 w-80 shadow-sm mt-6 hover:scale-105 duration-200">
-        <figure >
+      <div className="card bg-base-100 w-86 shadow-sm mt2 mb-6 hover:scale-105 duration-200 dark:bg-slate-900 dark:text-white dark:border">
+        <figure>
           <img src={item.image} alt="Shoes" />
         </figure>
         <div className="card-body">
