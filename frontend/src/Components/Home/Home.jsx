@@ -6,7 +6,7 @@ import { FreeBook } from "../FreeBook";
 export const Home = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <HeroSection />
       <FreeBook />
       <Footer />

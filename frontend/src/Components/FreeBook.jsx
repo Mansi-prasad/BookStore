@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import BookList from "../../public/BookList.json";
 import { BookCard } from "./BookCard";
+import axios from "axios";
 export const FreeBook = () => {
   // for a responsive slider
   var settings = {
@@ -40,11 +40,27 @@ export const FreeBook = () => {
       },
     ],
   };
-  const freeBooks = BookList.filter((book) => book.category === "free");
+  // const freeBooks = BookList.filter((book) => book.category === "free");
+  const backendURL = "http://localhost:3000/book";
+  const [freeBook, setFreeBook] = useState([]);
+  useEffect(() => {
+    const getFreeBook = async () => {
+      try {
+        const res = await axios.get(backendURL);
+        const data = res.data.filter((data) => data.category === "free");
+        // console.log(data);
+        setFreeBook(data);
+      } catch (error) {
+        console.log("An Error occured to fetch the free book details", error);
+      }
+    };
+    getFreeBook();
+  }, []);
+
   // console.log(freeBooks);
   return (
     <>
-      <div className="max-w-screen-2xl containner mx-auto md:px-20 px-4">
+      <div className="w-full mx-auto md:px-20 px-4">
         <div>
           <h1 className="text-2xl font-bold pb-2 ">Free Books </h1>
           <p className="py-10">
@@ -56,11 +72,11 @@ export const FreeBook = () => {
         </div>
         {/* react-slick for slider */}
         <div>
-          <div className="slider-container">
+          <div className="slider-container mx-20">
             <Slider {...settings}>
-              {freeBooks.map((item) => (
+              {freeBook.map((item) => (
                 // Passing free book data to BookCard through  props
-                <BookCard item={item} key={item.id} />
+                <BookCard item={item} key={item._id} />
               ))}
             </Slider>
           </div>

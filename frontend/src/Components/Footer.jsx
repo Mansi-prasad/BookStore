@@ -1,5 +1,4 @@
 import React from "react";
-
 export const Footer = () => {
   return (
     <>
@@ -50,7 +49,7 @@ export const Footer = () => {
         </nav>
         <aside>
           <p>
-            Copyright © {new Date().getFullYear()} - All right reserved by ACME
+            Copyright © {new Date().getFullYear()} - All right reserved by ABC
             Industries Ltd
           </p>
         </aside>

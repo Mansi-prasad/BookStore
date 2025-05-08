@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Login } from "./Login";
-import { SignUp } from "./SignUp";
 
-export const Navbar = () => {
+export const Navbar = ({ setShowPopup }) => {
   const [theme, setTheme] = useState(
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
   );
@@ -155,12 +153,11 @@ export const Navbar = () => {
           </div>
           <div className="">
             <a
-              className=" btn bg-black text-white px-3 py-2 rounded-md hover:bg-slate-800 duration-300 cursor-pointer "
-              onClick={() => document.getElementById("my_modal_3").showModal()}
+              className=" btn bg-black text-white px-4 py-2 rounded-md hover:bg-slate-800 duration-300 cursor-pointer "
+              onClick={() => setShowPopup(true)}
             >
               Login
             </a>
-            <Login />
           </div>
         </div>
       </div>

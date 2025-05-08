@@ -5,7 +5,7 @@ import { Footer } from "../Footer";
 export const About = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="min-h-screen">
         
       </div>

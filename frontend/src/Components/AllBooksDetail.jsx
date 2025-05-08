@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BookCard } from "./BookCard";
-import BookList from "../../public/BookList.json";
+// import BookList from "../../public/BookList.json";
 import { Link } from "react-router-dom";
+import axios from "axios";
 export const AllBooksDetail = () => {
+  const backendURL = "http://localhost:3000/book";
+  const [bookdetails, setBookDetails] = useState([]);
+  useEffect(() => {
+    const getBook = async () => {
+      try {
+        const res = await axios.get(backendURL);
+        console.log(res.data);
+        setBookDetails(res.data);
+      } catch (error) {
+        console.log("An error occure to fetch the book details", error);
+      }
+    };
+    getBook();
+  }, []);
   return (
     <>
       <div className="max-w-screen-2xl container mx-auto md:px-20 px-4">
@@ -23,8 +38,8 @@ export const AllBooksDetail = () => {
           </Link>
         </div>
         <div className="mt-12 grid grid-cols-1 md:grid-cols-4 gap-20 ">
-          {BookList.map((item) => {
-            return <BookCard item={item} key={item.id} />;
+          {bookdetails.map((item) => {
+            return <BookCard item={item} key={item._id} />;
           })}
         </div>
       </div>
