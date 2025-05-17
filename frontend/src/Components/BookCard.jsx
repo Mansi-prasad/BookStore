@@ -2,7 +2,7 @@ import React from "react";
 
 export const BookCard = ({ item }) => {
   return (
-    <div className="card bg-base-100 w-80 shadow-sm mt2 mb-6 hover:scale-105 duration-200 dark:bg-slate-900 dark:text-white dark:border">
+    <div className="card bg-base-100 w-80 shadow-sm mt2 mb-6 hover:scale-105 duration-200 dark:bg-slate-900 dark:text-white dark:border max-h-98">
       <figure>
         <img
           src={item.image}
@@ -23,8 +23,8 @@ export const BookCard = ({ item }) => {
         </p>
         <div className="card-actions justify-between">
           <div className="badge badge-outline">Rs. {item.price}</div>
-          <div className="badge badge-outline px-4 py-4 hover:bg-blue-500 hover:text-white duration-200">
-            But Now
+          <div className="border border-outline rounded-4xl px-4 py-2 hover:bg-blue-500 hover:cursor-pointer hover:text-white duration-200">
+            Buy Now
           </div>
         </div>
       </div>

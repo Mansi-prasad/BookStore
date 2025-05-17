@@ -1,14 +1,11 @@
 import mongoose from "mongoose";
-const connection_URL = "mongodb://localhost:27017/bookstore";
-// const connection_URL = process.env.CONNECTION_URI;
 async function DB_connect() {
+  const DB_url = process.env.DB_Connection;
   try {
-    await mongoose.connect(connection_URL);
-    console.log("connnected to mongoDB");
+    await mongoose.connect(DB_url);
+    console.log("DB connected successfully!");
   } catch (err) {
-    console.log(connection_URL);
     console.log("An Error occured to connect with mongoDB", err);
   }
 }
-
 export default DB_connect;
